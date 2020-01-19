@@ -22,6 +22,8 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
 
 # LumenAuthorsApi
 
+## Study Notes
+
 * Install php 7.1.3.2
 * Install Composer
 * Create a project `composer create-project laravel/lumen ...`
@@ -32,4 +34,7 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
 * Create a database migration file `php artisan make:migration CreateAuthorsTable --create=authors` 
   -> check & edit schema -> `php artisan migrate`
 * Create author model with attributes -> rename `app/User.php` as `app/Author.php`
+* Create factory with Faker 
+  `php artisan db: seed` and `php artisan migrate:fresh --seed`
+
 
