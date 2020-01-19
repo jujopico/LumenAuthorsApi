@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class AuthorController extends Controller
 {
+    use ApiResponser;
+    
     /**
      * Create a new controller instance.
      *

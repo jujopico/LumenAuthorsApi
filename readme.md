@@ -36,5 +36,7 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
 * Create author model with attributes -> rename `app/User.php` as `app/Author.php`
 * Create factory with Faker 
   `php artisan db: seed` and `php artisan migrate:fresh --seed`
+* Create author controller with 5 actions (index, store, show, update, destroy)
+* Create routes for CRUD operations on the authors(get/post/get/put+patch/delete)
 
 
