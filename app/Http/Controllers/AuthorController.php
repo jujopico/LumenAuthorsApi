@@ -29,9 +29,7 @@ class AuthorController extends Controller
     {
         $authors = Author::all();
 
-        return $authors;
-
-        // return $this->successResponse($authors);
+        return $this->successResponse($authors);
     }
 
     /**
