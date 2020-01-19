@@ -38,5 +38,7 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
   `php artisan db: seed` and `php artisan migrate:fresh --seed`
 * Create author controller with 5 actions (index, store, show, update, destroy)
 * Create routes for CRUD operations on the authors(get/post/get/put+patch/delete)
+* Normalize author's micro-service response with reusable `Trait`
+* Show the list of authors from the Lumen Controller on Postman
 
 
