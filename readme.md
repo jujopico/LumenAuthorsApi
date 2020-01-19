@@ -19,4 +19,17 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 ## License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
 # LumenAuthorsApi
+
+* Install php 7.1.3.2
+* Install Composer
+* Create a project `composer create-project laravel/lumen ...`
+* Check on Postman or `php -S localhost:8000 -t public/` -> localhost:8000
+* Enable Facades and Eloquent
+* Use sqlite on databases
+* Add APP_KEY (http://www.unit-conversion.info/texttools/random-string-generator/)
+* Create a database migration file `php artisan make:migration CreateAuthorsTable --create=authors` 
+  -> check & edit schema -> `php artisan migrate`
+* Create author model with attributes -> rename `app/User.php` as `app/Author.php`
+
