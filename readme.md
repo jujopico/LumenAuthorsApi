@@ -40,5 +40,6 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
 * Create routes for CRUD operations on the authors(get/post/get/put+patch/delete)
 * Normalize author's micro-service response with reusable `Trait`
 * Show the list of authors from the Lumen Controller on Postman
+  -> Change `return $authors` into `return $this->successResponse($authors)` put the same authors into "data" root element
 
 
