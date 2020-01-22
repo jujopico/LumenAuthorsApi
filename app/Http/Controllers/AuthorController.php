@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Author;
 use App\Traits\ApiResponser;
-use Illuminate\Http\Request;
-// use Illuminate\Http\Response;
+use Illuminate\Http\Request; /* index and show */
+use Illuminate\Http\Response; /* eidt */
 
 class AuthorController extends Controller
 {
@@ -67,25 +67,25 @@ class AuthorController extends Controller
      */
     public function update(Request $request, $author)
     {
-        // $rules = [
-        //     'name' => 'max:255',
-        //     'gender' => 'max:255|in:male,female',
-        //     'country' => 'max:255',
-        // ];
+        $rules = [
+            'name' => 'max:255',
+            'gender' => 'max:255|in:male,female',
+            'country' => 'max:255',
+        ];
 
-        // $this->validate($request, $rules);
+        $this->validate($request, $rules);
 
-        // $author = Author::findOrFail($author);
+        $author = Author::findOrFail($author);
 
-        // $author->fill($request->all());
+        $author->fill($request->all());
 
-        // if ($author->isClean()) {
-        //     return $this->errorResponse('At least one value must change', Response::HTTP_UNPROCESSABLE_ENTITY);
-        // }
+        if ($author->isClean()) {
+            return $this->errorResponse('At least one value must change', Response::HTTP_UNPROCESSABLE_ENTITY);
+        }
 
-        // $author->save();
+        $author->save();
 
-        // return $this->successResponse($author);
+        return $this->successResponse($author);
     }
 
     /**
