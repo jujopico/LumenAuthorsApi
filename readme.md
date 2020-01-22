@@ -43,6 +43,6 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
   -> Change `return $authors` into `return $this->successResponse($authors)` put the same authors into "data" root element
 * Show an author with an given id by calling `findOrFail()` and output with `successResponse()`
 * Allow to Edit an existing author & the `fill()` is just assgning not being directly saved into the database yet.
-
+* Delete method with `delete()`
 
 
