@@ -28,7 +28,6 @@ class AuthorController extends Controller
     public function index()
     {
         $authors = Author::all();
-
         return $this->successResponse($authors);
     }
 
@@ -38,17 +37,17 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        // $rules = [
-        //     'name' => 'required|max:255',
-        //     'gender' => 'required|max:255|in:male,female',
-        //     'country' => 'required|max:255',
-        // ];
+        $rules = [
+            'name' => 'required|max:255',
+            'gender' => 'required|max:255|in:male,female',
+            'country' => 'required|max:255',
+        ];
 
-        // $this->validate($request, $rules);
+        $this->validate($request, $rules);
 
-        // $author = Author::create($request->all());
+        $author = Author::create($request->all());
 
-        // return $this->successResponse($author, Response::HTTP_CREATED);
+        return $this->successResponse($author, Response::HTTP_CREATED);
     }
 
     /**
@@ -57,9 +56,9 @@ class AuthorController extends Controller
      */
     public function show($author)
     {
-        // $author = Author::findOrFail($author);
+        $author = Author::findOrFail($author);
 
-        // return $this->successResponse($author);
+        return $this->successResponse($author);
     }
 
     /**
