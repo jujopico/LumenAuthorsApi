@@ -38,11 +38,12 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
   `php artisan db: seed` and `php artisan migrate:fresh --seed`
 * Create author controller with 5 actions (index, store, show, update, destroy)
 * Create routes for CRUD operations on the authors(get/post/get/put+patch/delete)
-* Normalize author's micro-service response with reusable `Trait`
+* Normalize author's micro-service response with reusable `Traits/ApiResonpser`
 * Show the list of authors from the Lumen Controller on Postman
   -> Change `return $authors` into `return $this->successResponse($authors)` put the same authors into "data" root element
 * Show an author with an given id by calling `findOrFail()` and output with `successResponse()`
 * Allow to Edit an existing author & the `fill()` is just assgning not being directly saved into the database yet.
 * Delete method with `delete()`
+* Handle important errors and exceptions in `app/Exceptions/Handler.php` 
 
 
